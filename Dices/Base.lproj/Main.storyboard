@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Xw-nC-ZIp">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--two dices-->
+        <scene sceneID="kaR-el-bfQ">
+            <objects>
+                <viewController id="zba-9K-MZN" customClass="secondVC" customModule="Dices" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lHp-kM-Pnw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="33" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7p-qg-H5o">
+                                <rect key="frame" x="70.666666666666686" y="308" width="273" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-Ud-JK5">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="d98-8N-egp"/>
+                                            <constraint firstAttribute="height" constant="120" id="fL0-K1-QeL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="1sN-gM-QXL">
+                                        <rect key="frame" x="153" y="0.0" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="56p-jl-Eji"/>
+                                            <constraint firstAttribute="height" constant="120" id="I2H-nb-VAF"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDj-0l-RNK">
+                                <rect key="frame" x="146.66666666666666" y="534" width="119.99999999999997" height="36"/>
+                                <color key="backgroundColor" red="0.10980392156862745" green="0.57647058823529407" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="4iV-ov-oeB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="JRD-1d-HeC"/>
+                                    <constraint firstAttribute="height" constant="36" id="Ljj-gT-yqc"/>
+                                    <constraint firstAttribute="width" constant="120" id="mpu-qf-TEK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Shake me!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.makesToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shakeDiceBtn:" destination="zba-9K-MZN" eventType="touchUpInside" id="CGP-OJ-roa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HRV-YO-txs">
+                                <rect key="frame" x="195.66666666666666" y="123" width="29" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.69411764705882351" green="0.082352941176470587" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10980392156862745" green="0.57647058823529407" blue="0.35686274509803922" alpha="0.7029644691780822" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HRV-YO-txs" firstAttribute="centerX" secondItem="gDj-0l-RNK" secondAttribute="centerX" constant="3.3333333333333712" id="7qO-NT-IbX"/>
+                            <constraint firstItem="HRV-YO-txs" firstAttribute="centerX" secondItem="q7p-qg-H5o" secondAttribute="centerX" constant="2.8333333333333144" id="A4B-FE-wFw"/>
+                            <constraint firstItem="q7p-qg-H5o" firstAttribute="centerX" secondItem="lHp-kM-Pnw" secondAttribute="centerX" id="PRV-8C-IxL"/>
+                            <constraint firstItem="32F-hE-Lbe" firstAttribute="bottom" secondItem="gDj-0l-RNK" secondAttribute="bottom" constant="117" id="STQ-fG-H8Y"/>
+                            <constraint firstItem="q7p-qg-H5o" firstAttribute="centerY" secondItem="lHp-kM-Pnw" secondAttribute="centerY" id="Z30-vh-oUm"/>
+                            <constraint firstItem="q7p-qg-H5o" firstAttribute="top" secondItem="HRV-YO-txs" secondAttribute="bottom" constant="150" id="tSb-cN-UVW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="32F-hE-Lbe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="two dices" id="5T1-de-plF"/>
+                    <connections>
+                        <outlet property="imageFirstDice" destination="nO4-Ud-JK5" id="jsm-Vi-xBx"/>
+                        <outlet property="imageSecondDice" destination="1sN-gM-QXL" id="94h-7f-i5d"/>
+                        <outlet property="messageLabel" destination="HRV-YO-txs" id="Lpx-oI-830"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i1V-NM-WuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327.536231884058" y="107.60869565217392"/>
+        </scene>
+        <!--one dice-->
+        <scene sceneID="dWC-sI-fNq">
+            <objects>
+                <viewController id="YdM-24-gHM" customClass="firstVC" customModule="Dices" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mf9-Bo-bFg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-gj-NpH">
+                                <rect key="frame" x="147" y="308" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="hle-7m-CES"/>
+                                    <constraint firstAttribute="width" constant="120" id="tvA-Hl-aaF"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IvY-ag-QLx">
+                                <rect key="frame" x="80" y="123" width="255" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.69411764705882351" green="0.082352941176470587" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKe-dw-niT">
+                                <rect key="frame" x="147" y="534" width="120" height="36"/>
+                                <color key="backgroundColor" red="0.10980392160000001" green="0.57647058819999997" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="07D-f8-EyD"/>
+                                    <constraint firstAttribute="width" constant="120" id="6ha-L3-9br"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Shake me!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.makesToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shakeDiceBtn:" destination="YdM-24-gHM" eventType="touchUpInside" id="6gf-ee-n8V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10980392156862745" green="0.57647058823529407" blue="0.35686274509803922" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IvY-ag-QLx" firstAttribute="leading" secondItem="c9I-9s-1ir" secondAttribute="leading" constant="80" id="0ty-SW-DFc"/>
+                            <constraint firstItem="Rpr-gj-NpH" firstAttribute="centerY" secondItem="Mf9-Bo-bFg" secondAttribute="centerY" id="BMT-Zg-zs4"/>
+                            <constraint firstItem="IvY-ag-QLx" firstAttribute="centerX" secondItem="yKe-dw-niT" secondAttribute="centerX" id="M93-pg-Zfi"/>
+                            <constraint firstItem="IvY-ag-QLx" firstAttribute="centerX" secondItem="Rpr-gj-NpH" secondAttribute="centerX" id="g4t-yK-tkr"/>
+                            <constraint firstItem="c9I-9s-1ir" firstAttribute="bottom" secondItem="yKe-dw-niT" secondAttribute="bottom" constant="117" id="kbS-SL-gRj"/>
+                            <constraint firstItem="Rpr-gj-NpH" firstAttribute="top" secondItem="IvY-ag-QLx" secondAttribute="bottom" constant="150" id="oka-IT-ZLU"/>
+                            <constraint firstItem="Rpr-gj-NpH" firstAttribute="centerX" secondItem="Mf9-Bo-bFg" secondAttribute="centerX" id="y5K-NT-63q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c9I-9s-1ir"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="one dice" id="FNi-Nn-uRr"/>
+                    <connections>
+                        <outlet property="imageDice" destination="Rpr-gj-NpH" id="Zw0-gu-k5j"/>
+                        <outlet property="messageLabel" destination="IvY-ag-QLx" id="lBP-G3-AJF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcu-Pg-RAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324.63768115942031" y="-559.23913043478262"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FmU-Cp-FvR">
+            <objects>
+                <tabBarController id="8Xw-nC-ZIp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hdV-2r-ddv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YdM-24-gHM" kind="relationship" relationship="viewControllers" id="mAi-0L-Dwl"/>
+                        <segue destination="zba-9K-MZN" kind="relationship" relationship="viewControllers" id="29a-3G-G7R"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZj-lA-bTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-624" y="-227"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice1" width="100" height="100"/>
+    </resources>
+</document>
