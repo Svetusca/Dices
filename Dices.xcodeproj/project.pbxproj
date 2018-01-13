@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CCE9E0CB200816A0005024C7 /* oneDiceSound.WAV in Resources */ = {isa = PBXBuildFile; fileRef = CCE9E0CA200816A0005024C7 /* oneDiceSound.WAV */; };
-		CCE9E0CD200828B3005024C7 /* manyDicesSound.WAV in Resources */ = {isa = PBXBuildFile; fileRef = CCE9E0CC200828B3005024C7 /* manyDicesSound.WAV */; };
+		CCA69DB4200A056D00CA7FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA69DB3200A056C00CA7FB7 /* Assets.xcassets */; };
+		CCA69DB9200A07A800CA7FB7 /* manyDicesSound.WAV in Resources */ = {isa = PBXBuildFile; fileRef = CCA69DB8200A07A800CA7FB7 /* manyDicesSound.WAV */; };
+		CCA69DBB200A086E00CA7FB7 /* oneDiceSound.WAV in Resources */ = {isa = PBXBuildFile; fileRef = CCA69DBA200A086E00CA7FB7 /* oneDiceSound.WAV */; };
 		CCF544682007656E00320357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF544672007656E00320357 /* AppDelegate.swift */; };
 		CCF5446D2007656F00320357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF5446B2007656F00320357 /* Main.storyboard */; };
-		CCF5446F2007656F00320357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF5446E2007656F00320357 /* Assets.xcassets */; };
 		CCF544722007656F00320357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF544702007656F00320357 /* LaunchScreen.storyboard */; };
 		CCF5447A2007669200320357 /* firstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF544792007669200320357 /* firstVC.swift */; };
 		CCF5447C200766BA00320357 /* secondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF5447B200766BA00320357 /* secondVC.swift */; };
@@ -19,12 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CCE9E0CA200816A0005024C7 /* oneDiceSound.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = oneDiceSound.WAV; sourceTree = "<group>"; };
-		CCE9E0CC200828B3005024C7 /* manyDicesSound.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = manyDicesSound.WAV; path = ../../../../Desktop/manyDicesSound.WAV; sourceTree = "<group>"; };
+		CCA69DB3200A056C00CA7FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCA69DB8200A07A800CA7FB7 /* manyDicesSound.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = manyDicesSound.WAV; sourceTree = "<group>"; };
+		CCA69DBA200A086E00CA7FB7 /* oneDiceSound.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = oneDiceSound.WAV; sourceTree = "<group>"; };
 		CCF544642007656E00320357 /* Dices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF544672007656E00320357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF5446C2007656F00320357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CCF5446E2007656F00320357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCF544712007656F00320357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCF544732007656F00320357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCF544792007669200320357 /* firstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstVC.swift; sourceTree = "<group>"; };
@@ -43,6 +43,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CCA69DB5200A066800CA7FB7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCA69DB7200A06D900CA7FB7 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CCA69DB7200A06D900CA7FB7 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CCA69DB8200A07A800CA7FB7 /* manyDicesSound.WAV */,
+				CCA69DBA200A086E00CA7FB7 /* oneDiceSound.WAV */,
+			);
+			name = Sounds;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		CCF5445B2007656E00320357 = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +85,8 @@
 				CCF5447B200766BA00320357 /* secondVC.swift */,
 				CCF5447D2007BD6600320357 /* ShakeAlertExten.swift */,
 				CCF5446B2007656F00320357 /* Main.storyboard */,
-				CCF5446E2007656F00320357 /* Assets.xcassets */,
+				CCA69DB3200A056C00CA7FB7 /* Assets.xcassets */,
+				CCA69DB5200A066800CA7FB7 /* Resources */,
 				CCF5447F2007BFD300320357 /* Supporting files */,
 			);
 			path = Dices;
@@ -77,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				CCF544702007656F00320357 /* LaunchScreen.storyboard */,
-				CCE9E0CA200816A0005024C7 /* oneDiceSound.WAV */,
-				CCE9E0CC200828B3005024C7 /* manyDicesSound.WAV */,
 				CCF544732007656F00320357 /* Info.plist */,
 			);
 			path = "Supporting files";
@@ -142,11 +159,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCE9E0CD200828B3005024C7 /* manyDicesSound.WAV in Resources */,
+				CCA69DBB200A086E00CA7FB7 /* oneDiceSound.WAV in Resources */,
+				CCA69DB9200A07A800CA7FB7 /* manyDicesSound.WAV in Resources */,
 				CCF544722007656F00320357 /* LaunchScreen.storyboard in Resources */,
-				CCF5446F2007656F00320357 /* Assets.xcassets in Resources */,
 				CCF5446D2007656F00320357 /* Main.storyboard in Resources */,
-				CCE9E0CB200816A0005024C7 /* oneDiceSound.WAV in Resources */,
+				CCA69DB4200A056D00CA7FB7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
