@@ -13,9 +13,9 @@
 		CCF544682007656E00320357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF544672007656E00320357 /* AppDelegate.swift */; };
 		CCF5446D2007656F00320357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF5446B2007656F00320357 /* Main.storyboard */; };
 		CCF544722007656F00320357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF544702007656F00320357 /* LaunchScreen.storyboard */; };
-		CCF5447A2007669200320357 /* firstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF544792007669200320357 /* firstVC.swift */; };
-		CCF5447C200766BA00320357 /* secondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF5447B200766BA00320357 /* secondVC.swift */; };
-		CCF5447E2007BD6600320357 /* ShakeAlertExten.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF5447D2007BD6600320357 /* ShakeAlertExten.swift */; };
+		CCF5447A2007669200320357 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF544792007669200320357 /* FirstVC.swift */; };
+		CCF5447C200766BA00320357 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF5447B200766BA00320357 /* SecondVC.swift */; };
+		CCF5447E2007BD6600320357 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF5447D2007BD6600320357 /* extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		CCF5446C2007656F00320357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCF544712007656F00320357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCF544732007656F00320357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCF544792007669200320357 /* firstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstVC.swift; sourceTree = "<group>"; };
-		CCF5447B200766BA00320357 /* secondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondVC.swift; sourceTree = "<group>"; };
-		CCF5447D2007BD6600320357 /* ShakeAlertExten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAlertExten.swift; sourceTree = "<group>"; };
+		CCF544792007669200320357 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		CCF5447B200766BA00320357 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		CCF5447D2007BD6600320357 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				CCF544672007656E00320357 /* AppDelegate.swift */,
-				CCF544792007669200320357 /* firstVC.swift */,
-				CCF5447B200766BA00320357 /* secondVC.swift */,
-				CCF5447D2007BD6600320357 /* ShakeAlertExten.swift */,
+				CCF544792007669200320357 /* FirstVC.swift */,
+				CCF5447B200766BA00320357 /* SecondVC.swift */,
+				CCF5447D2007BD6600320357 /* extension.swift */,
 				CCF5446B2007656F00320357 /* Main.storyboard */,
 				CCA69DB3200A056C00CA7FB7 /* Assets.xcassets */,
 				CCA69DB5200A066800CA7FB7 /* Resources */,
@@ -175,9 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCF544682007656E00320357 /* AppDelegate.swift in Sources */,
-				CCF5447C200766BA00320357 /* secondVC.swift in Sources */,
-				CCF5447A2007669200320357 /* firstVC.swift in Sources */,
-				CCF5447E2007BD6600320357 /* ShakeAlertExten.swift in Sources */,
+				CCF5447C200766BA00320357 /* SecondVC.swift in Sources */,
+				CCF5447A2007669200320357 /* FirstVC.swift in Sources */,
+				CCF5447E2007BD6600320357 /* extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

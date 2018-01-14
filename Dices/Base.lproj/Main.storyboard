@@ -12,29 +12,28 @@
     <customFonts key="customFonts">
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
-            <string>HelveticaNeue-Bold</string>
         </array>
     </customFonts>
     <scenes>
         <!--two dices-->
         <scene sceneID="kaR-el-bfQ">
             <objects>
-                <viewController id="zba-9K-MZN" customClass="secondVC" customModule="Dices" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zba-9K-MZN" customClass="SecondVC" customModule="Dices" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lHp-kM-Pnw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="33" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7p-qg-H5o">
-                                <rect key="frame" x="70.666666666666686" y="308" width="273" height="120"/>
+                                <rect key="frame" x="71" y="308" width="273" height="120"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-Ud-JK5">
+                                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="nO4-Ud-JK5">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="d98-8N-egp"/>
                                             <constraint firstAttribute="height" constant="120" id="fL0-K1-QeL"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="1sN-gM-QXL">
+                                    <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="1sN-gM-QXL">
                                         <rect key="frame" x="153" y="0.0" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="56p-jl-Eji"/>
@@ -44,7 +43,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDj-0l-RNK">
-                                <rect key="frame" x="146.66666666666666" y="534" width="119.99999999999997" height="36"/>
+                                <rect key="frame" x="147" y="534" width="120" height="36"/>
                                 <color key="backgroundColor" red="0.10980392156862745" green="0.57647058823529407" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="4iV-ov-oeB"/>
@@ -54,7 +53,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Shake me!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.makesToBounds" value="YES"/>
@@ -66,30 +65,34 @@
                                     <action selector="shakeDiceBtn:" destination="zba-9K-MZN" eventType="touchUpInside" id="CGP-OJ-roa"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HRV-YO-txs">
-                                <rect key="frame" x="195.66666666666666" y="123" width="29" height="35"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" red="0.69411764705882351" green="0.082352941176470587" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4O-Ux-mQY">
+                                <rect key="frame" x="30" y="115" width="360" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="VdC-zF-DkV"/>
+                                    <constraint firstAttribute="height" constant="50" id="nB8-3S-3Zb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.10980392156862745" green="0.57647058823529407" blue="0.35686274509803922" alpha="0.7029644691780822" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="HRV-YO-txs" firstAttribute="centerX" secondItem="gDj-0l-RNK" secondAttribute="centerX" constant="3.3333333333333712" id="7qO-NT-IbX"/>
-                            <constraint firstItem="HRV-YO-txs" firstAttribute="centerX" secondItem="q7p-qg-H5o" secondAttribute="centerX" constant="2.8333333333333144" id="A4B-FE-wFw"/>
                             <constraint firstItem="q7p-qg-H5o" firstAttribute="centerX" secondItem="lHp-kM-Pnw" secondAttribute="centerX" id="PRV-8C-IxL"/>
                             <constraint firstItem="32F-hE-Lbe" firstAttribute="bottom" secondItem="gDj-0l-RNK" secondAttribute="bottom" constant="117" id="STQ-fG-H8Y"/>
+                            <constraint firstItem="32F-hE-Lbe" firstAttribute="trailing" secondItem="r4O-Ux-mQY" secondAttribute="trailing" constant="24" id="Sg7-yn-VCF"/>
                             <constraint firstItem="q7p-qg-H5o" firstAttribute="centerY" secondItem="lHp-kM-Pnw" secondAttribute="centerY" id="Z30-vh-oUm"/>
-                            <constraint firstItem="q7p-qg-H5o" firstAttribute="top" secondItem="HRV-YO-txs" secondAttribute="bottom" constant="150" id="tSb-cN-UVW"/>
+                            <constraint firstItem="r4O-Ux-mQY" firstAttribute="leading" secondItem="32F-hE-Lbe" secondAttribute="leading" constant="30" id="atp-Lq-Qbh"/>
+                            <constraint firstItem="gDj-0l-RNK" firstAttribute="centerX" secondItem="q7p-qg-H5o" secondAttribute="centerX" id="g0n-e4-Uzt"/>
+                            <constraint firstItem="r4O-Ux-mQY" firstAttribute="top" secondItem="32F-hE-Lbe" secondAttribute="top" constant="95" id="jWe-gb-i7a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="32F-hE-Lbe"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="two dices" id="5T1-de-plF"/>
+                    <tabBarItem key="tabBarItem" title="two dices" image="dicesIcon" selectedImage="dicesIcon" id="5T1-de-plF"/>
                     <connections>
-                        <outlet property="imageFirstDice" destination="nO4-Ud-JK5" id="jsm-Vi-xBx"/>
-                        <outlet property="imageSecondDice" destination="1sN-gM-QXL" id="94h-7f-i5d"/>
-                        <outlet property="messageLabel" destination="HRV-YO-txs" id="Lpx-oI-830"/>
+                        <outlet property="firstDiceImage" destination="nO4-Ud-JK5" id="TaO-B4-GeC"/>
+                        <outlet property="messageLabel" destination="r4O-Ux-mQY" id="VEN-Oe-rlJ"/>
+                        <outlet property="secondDiceImage" destination="1sN-gM-QXL" id="7hT-1S-5fv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1V-NM-WuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,7 +102,7 @@
         <!--one dice-->
         <scene sceneID="dWC-sI-fNq">
             <objects>
-                <viewController id="YdM-24-gHM" customClass="firstVC" customModule="Dices" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YdM-24-gHM" customClass="FirstVC" customModule="Dices" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mf9-Bo-bFg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,13 +114,6 @@
                                     <constraint firstAttribute="width" constant="120" id="tvA-Hl-aaF"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IvY-ag-QLx">
-                                <rect key="frame" x="80" y="123" width="255" height="35"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" red="0.69411764705882351" green="0.082352941176470587" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKe-dw-niT">
                                 <rect key="frame" x="147" y="534" width="120" height="36"/>
                                 <color key="backgroundColor" red="0.10980392160000001" green="0.57647058819999997" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -127,7 +123,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Shake me!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -139,23 +135,32 @@
                                     <action selector="shakeDiceBtn:" destination="YdM-24-gHM" eventType="touchUpInside" id="6gf-ee-n8V"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCl-Gl-dbe">
+                                <rect key="frame" x="30" y="115" width="360" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qQZ-65-PEo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.10980392156862745" green="0.57647058823529407" blue="0.35686274509803922" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IvY-ag-QLx" firstAttribute="leading" secondItem="c9I-9s-1ir" secondAttribute="leading" constant="80" id="0ty-SW-DFc"/>
                             <constraint firstItem="Rpr-gj-NpH" firstAttribute="centerY" secondItem="Mf9-Bo-bFg" secondAttribute="centerY" id="BMT-Zg-zs4"/>
-                            <constraint firstItem="IvY-ag-QLx" firstAttribute="centerX" secondItem="yKe-dw-niT" secondAttribute="centerX" id="M93-pg-Zfi"/>
-                            <constraint firstItem="IvY-ag-QLx" firstAttribute="centerX" secondItem="Rpr-gj-NpH" secondAttribute="centerX" id="g4t-yK-tkr"/>
+                            <constraint firstItem="LCl-Gl-dbe" firstAttribute="top" secondItem="c9I-9s-1ir" secondAttribute="top" constant="95" id="Vdh-F1-5hL"/>
+                            <constraint firstItem="yKe-dw-niT" firstAttribute="leading" secondItem="Rpr-gj-NpH" secondAttribute="leading" id="jd5-pF-4ke"/>
                             <constraint firstItem="c9I-9s-1ir" firstAttribute="bottom" secondItem="yKe-dw-niT" secondAttribute="bottom" constant="117" id="kbS-SL-gRj"/>
-                            <constraint firstItem="Rpr-gj-NpH" firstAttribute="top" secondItem="IvY-ag-QLx" secondAttribute="bottom" constant="150" id="oka-IT-ZLU"/>
+                            <constraint firstItem="LCl-Gl-dbe" firstAttribute="leading" secondItem="c9I-9s-1ir" secondAttribute="leading" constant="30" id="pPP-ng-ijn"/>
                             <constraint firstItem="Rpr-gj-NpH" firstAttribute="centerX" secondItem="Mf9-Bo-bFg" secondAttribute="centerX" id="y5K-NT-63q"/>
+                            <constraint firstItem="c9I-9s-1ir" firstAttribute="trailing" secondItem="LCl-Gl-dbe" secondAttribute="trailing" constant="24" id="z7L-j9-A8P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c9I-9s-1ir"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="one dice" id="FNi-Nn-uRr"/>
+                    <tabBarItem key="tabBarItem" title="one dice" image="diceIcon" selectedImage="diceIcon" id="FNi-Nn-uRr"/>
                     <connections>
                         <outlet property="imageDice" destination="Rpr-gj-NpH" id="Zw0-gu-k5j"/>
-                        <outlet property="messageLabel" destination="IvY-ag-QLx" id="lBP-G3-AJF"/>
+                        <outlet property="messageLabel" destination="LCl-Gl-dbe" id="pW1-My-OEJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcu-Pg-RAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,10 +171,12 @@
         <scene sceneID="FmU-Cp-FvR">
             <objects>
                 <tabBarController id="8Xw-nC-ZIp" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hdV-2r-ddv">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="hdV-2r-ddv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.58029369903280226" green="0.82961215101522845" blue="0.6364441071007032" alpha="0.14164169520547945" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="YdM-24-gHM" kind="relationship" relationship="viewControllers" id="mAi-0L-Dwl"/>
@@ -183,5 +190,7 @@
     </scenes>
     <resources>
         <image name="dice1" width="100" height="100"/>
+        <image name="diceIcon" width="25" height="25"/>
+        <image name="dicesIcon" width="25" height="25"/>
     </resources>
 </document>
