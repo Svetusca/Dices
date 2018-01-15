@@ -23,43 +23,44 @@ class FirstVC: UIViewController, AVAudioPlayerDelegate {
         return true
     }
 
-//MARK: make hardware vibrate action
+    //MARK: make hardware vibrate action
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-//        if motion == .motionShake {
-            diceSound()
-            randomDiceImage()
+        if motion == .motionShake {
+            makeSoundDice()
+            updateDiceImage()
             shakeDice()
-//        }
+        }
     }
 
-//MARK: make tap button action
+    //MARK: make tap button action
     @IBAction func shakeDiceBtn(_ sender: UIButton) {
-
         self.messageLabel.text = ""
-        diceSound()
+        makeSoundDice()
         shakeDice()
 
         let when = DispatchTime.now() + 0.5
         DispatchQueue.main.asyncAfter(deadline: when) {
-            self.randomDiceImage()
+            self.updateDiceImage()
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
         }
-
     }
 
-    func diceSound() {
+    func makeSoundDice() {
         try! audioPlayer = AVAudioPlayer(contentsOf: soundURL!)
         audioPlayer.play()
     }
 
-    func randomDiceImage(){
+    func updateDiceImage() {
         let randomFirstDiceIndex = Int(arc4random_uniform(6))+1
         self.imageDice.image = UIImage(named: "dice\(randomFirstDiceIndex).png")!
-        if randomFirstDiceIndex == 6 {self.messageLabel.text = "Congratulations!"}
+        if randomFirstDiceIndex == 6 {
+            self.messageLabel.text = "Congratulations!"
+        } else {
+            self.messageLabel.text = ""
         }
+    }
     
     func shakeDice() {
         self.imageDice.shake(duration: 0.08, shakeCount: 2)
     }
-
 }

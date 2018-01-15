@@ -25,7 +25,7 @@ class SecondVC: UIViewController, AVAudioPlayerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        randomDiceImage()
+        updateDiceImage()
     }
 
     override func becomeFirstResponder() -> Bool {
@@ -35,28 +35,26 @@ class SecondVC: UIViewController, AVAudioPlayerDelegate {
     //MARK: make hardware vibrate action
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            randomDiceImage()
-            diceSound()
+            updateDiceImage()
+            makeSoundDice()
             shakeDice()
         }
     }
 
     //MARK: make tap button action
     @IBAction func shakeDiceBtn(_ sender: UIButton) {
-
         self.messageLabel.text = ""
-        diceSound()
+        makeSoundDice()
         shakeDice()
 
         let when = DispatchTime.now() + 0.5
         DispatchQueue.main.asyncAfter(deadline: when) {
-            self.randomDiceImage()
+            self.updateDiceImage()
             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
         }
-
     }
 
-    func randomDiceImage(){
+    func updateDiceImage() {
         let randomFirstDiceIndex = Int(arc4random_uniform(6))+1
         firstDiceImage.image = UIImage(named: "dice\(randomFirstDiceIndex).png")!
         let randomSecondDiceIndex = Int(arc4random_uniform(6))+1
@@ -64,12 +62,12 @@ class SecondVC: UIViewController, AVAudioPlayerDelegate {
         let sumRandom = randomFirstDiceIndex + randomSecondDiceIndex
         if sumRandom == 12 {
             self.messageLabel.text = "Congratulations!"
-        }else {
+        } else {
             self.messageLabel.text = "Your result is \(sumRandom)"
         }
     }
 
-    func diceSound() {
+    func makeSoundDice() {
         try! audioPlayer = AVAudioPlayer(contentsOf: soundURL!)
         audioPlayer.play()
     }
@@ -78,7 +76,6 @@ class SecondVC: UIViewController, AVAudioPlayerDelegate {
         self.firstDiceImage.shake(duration: 0.08, shakeCount: 2)
         self.secondDiceImage.shake(duration: 0.08, shakeCount: 2)
     }
-
 }
 
 
