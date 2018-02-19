@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CCA69DB4200A056D00CA7FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA69DB3200A056C00CA7FB7 /* Assets.xcassets */; };
+		CC653140201699E000736D77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC65313F201699E000736D77 /* Assets.xcassets */; };
 		CCA69DB9200A07A800CA7FB7 /* manyDicesSound.WAV in Resources */ = {isa = PBXBuildFile; fileRef = CCA69DB8200A07A800CA7FB7 /* manyDicesSound.WAV */; };
 		CCA69DBB200A086E00CA7FB7 /* oneDiceSound.WAV in Resources */ = {isa = PBXBuildFile; fileRef = CCA69DBA200A086E00CA7FB7 /* oneDiceSound.WAV */; };
 		CCF544682007656E00320357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF544672007656E00320357 /* AppDelegate.swift */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CCA69DB3200A056C00CA7FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC65313F201699E000736D77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCA69DB8200A07A800CA7FB7 /* manyDicesSound.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = manyDicesSound.WAV; sourceTree = "<group>"; };
 		CCA69DBA200A086E00CA7FB7 /* oneDiceSound.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = oneDiceSound.WAV; sourceTree = "<group>"; };
 		CCF544642007656E00320357 /* Dices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dices.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +85,7 @@
 				CCF5447B200766BA00320357 /* SecondVC.swift */,
 				CCF5447D2007BD6600320357 /* extension.swift */,
 				CCF5446B2007656F00320357 /* Main.storyboard */,
-				CCA69DB3200A056C00CA7FB7 /* Assets.xcassets */,
+				CC65313F201699E000736D77 /* Assets.xcassets */,
 				CCA69DB5200A066800CA7FB7 /* Resources */,
 				CCF5447F2007BFD300320357 /* Supporting files */,
 			);
@@ -163,7 +163,7 @@
 				CCA69DB9200A07A800CA7FB7 /* manyDicesSound.WAV in Resources */,
 				CCF544722007656F00320357 /* LaunchScreen.storyboard in Resources */,
 				CCF5446D2007656F00320357 /* Main.storyboard in Resources */,
-				CCA69DB4200A056D00CA7FB7 /* Assets.xcassets in Resources */,
+				CC653140201699E000736D77 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
